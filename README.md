@@ -9,7 +9,7 @@ Ce repository contient un pipeline d’analyse computationnelle de données comp
 
 Ce projet s’inscrit dans un contexte de recherche en neurosciences computationnelles impliquant :
 
-- Tracking automatisé de points anatomiques avec DeepLabCut
+- Tracking automatisé de points avec DeepLabCut
 - Extraction des coordonnées (x, y) de différentes parties du corps
 - Analyse des trajectoires et de la cinématique du mouvement
 - Traitement et visualisation de données comportementales
@@ -20,7 +20,7 @@ Ce travail est basé sur une expérience de stage en laboratoire de neuroscience
 
 Le pipeline permet de :
 
-- Charger des données DeepLabCut (CSV MultiIndex)
+- Charger des données DeepLabCut (CSV)
 - Filtrer les données selon le score de confiance (likelihood, p-cutoff)
 - Nettoyer les artefacts et interpoler les données manquantes
 - Calculer des métriques cinématiques :
@@ -29,7 +29,7 @@ Le pipeline permet de :
   - distance parcourue
 - Générer des visualisations scientifiques des mouvements
 
-## Technologies utilisées
+## Librairies utilisées
 
 - Python
 - NumPy
@@ -37,11 +37,4 @@ Le pipeline permet de :
 - Matplotlib
 - DeepLabCut (sorties CSV)
 
-## Exemple d’utilisation
 
-Installer les dépendances :
-
-```bash
-pip install -r requirements.txt
-
-python src/dlc_kinematics.py --csv data/exemple_dlc.csv --out figures
